@@ -1,0 +1,49 @@
+Jump to pages -------------------complete---------------
+
+//route-----complete---------
+/blog GET display index.ejs.
+/blog/create GET display form.ejs
+/blog/:id GET display articleInfo.ejs
+/blog/:id/edit GET display formUpdate.ejs with 
+values updated from database.
+/blog/:id/delete GET -> DELETE by ID.
+/blog/:id/update post>updateBY ID.
+/blog/create POST post value to database
+
+set style-----complete---------
+
+set mongoose database.-----complete---------
+
+manupilate database values from route-----complete---------
+
+work on view
+work on from.ejs
+work on index.ejs
+work on articleInfo
+work on formUpdate.ejs
+
+index.ejs>section>
+    <% blogs.forEach((blog)=>{ %>
+           <div class="articles">
+            <h2><%= blog.title %></h2>
+            <p><%= blog.description.split(" ").splice(0,20).join(" ").concat(" ...") %></p>
+            <br>
+            <h6><%= blog.author %></h2>
+            <a href="/blog/<%= article.id%>">Read More </a>
+           </div>
+        <% }) %> 
+
+
+articleInfo.ejs>section>
+<!--            <div class="articles">
+             <h2><%= blog.title %></h2>
+            <p><%= blog.description %></p>
+            <br>
+            <h6><%= blog.author %></h2> 
+           <div>
+            <a href="/blog/<%= article.id%>/edit" class="article-btn edit">Edit </a>
+            <a href="/blog/<%= article.id%>/delete" class="article-btn edit">Delete </a>
+           </div>
+           </div>
+        <% }) %> -->
+        
