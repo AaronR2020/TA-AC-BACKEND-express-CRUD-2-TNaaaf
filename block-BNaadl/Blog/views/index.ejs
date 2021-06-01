@@ -1,0 +1,32 @@
+                    <!--Display all articles-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blog</title>
+    <link rel='stylesheet' href='stylesheets/style.css' />
+  </head>
+  <body>
+    <nav>
+      <div class="horizontal-flex">
+        <a href="/blog" class="anchor">Blog</a>
+        <a class="nav success" href='/blog/create'>Write Article</a>
+      </div>
+    </nav>
+    <section>
+      <!--add blogs here-->
+      <%console.log(Blogs)%>
+      <% Blogs.forEach(blog =>{ %>
+        <div class="articles">
+         <h2><%= blog.title %></h2>
+         <p><%= blog.description.split(" ").splice(0,20).join(" ").concat(" ...") %></p>
+         <br>
+         <h6><%= blog.author %></h2>
+         <a href="/blog/<%= article.id %>" class="nav success">Read More </a>
+        </div>
+     <% }) %> 
+    </section>
+  </body>
+</html>
+
+
